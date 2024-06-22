@@ -45,7 +45,7 @@ const SideComing = () => {
         },
       };
       const { data } = await axios.get(
-        `http://localhost:4444/api/user/profile/${user.user.id}`,
+        `https://abhiman-chatapp-backend.onrender.com/api/user/profile/${user.user.id}`,
         config
       );
       setInvitedTokens(data.data.invites);
@@ -79,7 +79,7 @@ const SideComing = () => {
         },
       };
       const { data } = await axios.get(
-        `http://localhost:4444/api/user/search-user?search=${search}`,
+        `https://abhiman-chatapp-backend.onrender.com/api/user/search-user?search=${search}`,
         config
       );
       setLoading(false);
@@ -107,7 +107,7 @@ const SideComing = () => {
         },
       };
       const { data } = await axios.post(
-        `http://localhost:4444/api/chat/joinroom`,
+        `https://abhiman-chatapp-backend.onrender.com/api/chat/joinroom`,
         { roomId, joinRoomToken },
         config
       );

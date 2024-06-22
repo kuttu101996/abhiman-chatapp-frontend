@@ -41,13 +41,16 @@ const Login = () => {
         userId,
         password,
       };
-      await fetch(`http://localhost:4444/api/auth/login`, {
-        method: "POST",
-        headers: {
-          "Content-type": "application/json",
-        },
-        body: JSON.stringify(d2p),
-      })
+      await fetch(
+        `https://abhiman-chatapp-backend.onrender.com/api/auth/login`,
+        {
+          method: "POST",
+          headers: {
+            "Content-type": "application/json",
+          },
+          body: JSON.stringify(d2p),
+        }
+      )
         .then((res) => res.json())
         .then((data) => {
           if (data.message === "User not found") {

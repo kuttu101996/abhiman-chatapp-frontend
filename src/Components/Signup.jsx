@@ -72,11 +72,9 @@ const Signup = () => {
           "Content-type": "application/json",
         },
       };
-      // comm-u-cate.onrender.com
       const { data } = await axios.post(
-        `http://localhost:4444/api/auth/register`,
+        `https://abhiman-chatapp-backend.onrender.com/api/auth/register`,
         { name, userId, deviceId, phone, password, isPrime },
-        // { userId, deviceId, name, phone, password, availCoins, isPrime }
         head
       );
       console.log(data);

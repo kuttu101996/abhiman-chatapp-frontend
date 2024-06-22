@@ -27,7 +27,7 @@ const MyChats = () => {
         },
       };
       const { data } = await axios.get(
-        "http://localhost:4444/api/chat/joined-rooms",
+        "https://abhiman-chatapp-backend.onrender.com/api/chat/joined-rooms",
         config
       );
       setChats(data.data.joinedRooms);

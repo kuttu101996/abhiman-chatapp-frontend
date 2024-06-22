@@ -53,7 +53,7 @@ const GroupChatModal = ({ children }) => {
         },
       };
       const { data } = await axios.post(
-        `http://localhost:4444/api/chat/create-chatroom`,
+        `https://abhiman-chatapp-backend.onrender.com/api/chat/create-chatroom`,
         { roomId: roomName },
         config
       );
@@ -128,7 +128,7 @@ const GroupChatModal = ({ children }) => {
       let count = 0;
       let result = selectedUsers.map(async (user) => {
         const { data } = await axios.post(
-          `http://localhost:4444/api/chat/invite`,
+          `https://abhiman-chatapp-backend.onrender.com/api/chat/invite`,
           { roomId: roomName, invitedUserId: user.userId },
           config
         );
@@ -186,7 +186,7 @@ const GroupChatModal = ({ children }) => {
         },
       };
       const { data } = await axios.get(
-        `http://localhost:4444/api/user/search-user?search=${query}`,
+        `https://abhiman-chatapp-backend.onrender.com/api/user/search-user?search=${query}`,
         config
       );
       setLoading(false);

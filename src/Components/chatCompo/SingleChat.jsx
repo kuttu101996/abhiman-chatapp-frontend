@@ -17,7 +17,7 @@ import io from "socket.io-client";
 import Lottie from "lottie-react";
 import typingAnni from "../../animation/typing.json";
 
-const ENDPOINT = "http://localhost:4444";
+const ENDPOINT = "https://abhiman-chatapp-backend.onrender.com";
 var socket;
 
 const SingleChat = () => {
